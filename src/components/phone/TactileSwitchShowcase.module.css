@@ -1,0 +1,259 @@
+.section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionLabel {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--satin-champagne);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  color: var(--text-pure);
+  margin-bottom: 1rem;
+}
+
+.sectionDesc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 580px;
+  line-height: 1.6;
+}
+
+.interactiveContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-titanium);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow-ambient);
+}
+
+/* Left: Mechanical Switch Controller */
+.switchControlPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.switchAssembly {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--matte-obsidian);
+  border: 1px solid var(--border-titanium);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+}
+
+.assemblyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.activePositionIndicator {
+  color: var(--satin-champagne);
+  font-weight: 600;
+}
+
+.modesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.modeButton {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-titanium);
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+
+.modeButton:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.modeButtonActive {
+  background: rgba(216, 200, 184, 0.08);
+  border-color: var(--border-active);
+  box-shadow: 0 0 25px rgba(216, 200, 184, 0.1);
+}
+
+.notchIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-xs);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-titanium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.modeButtonActive .notchIcon {
+  background: var(--satin-champagne);
+  color: #0c0d10;
+  font-weight: 700;
+  border-color: var(--satin-champagne);
+}
+
+.modeTextGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.modeTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-pure);
+}
+
+.modeDesc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Right: Simulated OLED Display */
+.displaySimulator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.phoneChassisMock {
+  width: 320px;
+  height: 580px;
+  border-radius: 42px;
+  background: #000;
+  border: 4px solid #2a2d36;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 20px 60px rgba(0, 0, 0, 0.8);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+}
+
+.notchBar {
+  width: 80px;
+  height: 18px;
+  background: #15181f;
+  border-radius: var(--radius-full);
+  margin: 0 auto 1.5rem;
+}
+
+/* Screen state variations */
+.screenContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: opacity 0.2s ease;
+}
+
+.clockHero {
+  font-size: 3.5rem;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: #fff;
+  font-family: var(--font-sans);
+}
+
+.dateRow {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.glanceCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.glanceLabel {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--satin-champagne);
+  text-transform: uppercase;
+}
+
+.glanceVal {
+  font-size: 0.875rem;
+  color: #fff;
+}
+
+.hardwareCutoffWarning {
+  background: rgba(255, 78, 78, 0.1);
+  border: 1px solid rgba(255, 78, 78, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  color: #ff9999;
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+}
+
+.bottomStatusBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 900px) {
+  .interactiveContainer {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+  }
+}
