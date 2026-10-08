@@ -1,0 +1,318 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Header greeting */
+.greetingRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.greetingText h2 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #151515;
+  letter-spacing: -0.4px;
+}
+
+.greetingText p {
+  font-size: 14px;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+/* KPI Summary Cards Grid */
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.kpiCard {
+  background: #ffffff;
+  border: 1px solid #e2ddd6;
+  border-radius: 12px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.kpiCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.kpiHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kpiTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kpiIconWrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #fdf5f7;
+  color: #590b28;
+  display: grid;
+  place-items: center;
+}
+
+.kpiValue {
+  font-size: 28px;
+  font-weight: 800;
+  color: #151515;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.kpiSubtext {
+  font-size: 12px;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Clock In Button */
+.clockButton {
+  margin-top: 6px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 160ms ease;
+}
+
+.clockButtonIn {
+  background: #059669;
+  color: #ffffff;
+}
+
+.clockButtonIn:hover {
+  background: #047857;
+}
+
+.clockButtonOut {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.clockButtonOut:hover {
+  background: #b91c1c;
+}
+
+/* Two-column layout */
+.dualGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .dualGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Standard Section Box */
+.box {
+  background: #ffffff;
+  border: 1px solid #e2ddd6;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.boxHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.boxTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: #151515;
+}
+
+.boxLink {
+  font-size: 12px;
+  font-weight: 600;
+  color: #590b28;
+  text-decoration: none;
+}
+
+.boxLink:hover {
+  text-decoration: underline;
+}
+
+/* Data Table */
+.tableContainer {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+
+.table th {
+  padding: 12px 14px;
+  background: #fbf9f5;
+  color: #64748b;
+  font-weight: 600;
+  border-bottom: 1px solid #e2ddd6;
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 14px;
+  border-bottom: 1px solid #f1ece5;
+  color: #151515;
+}
+
+.table tr:hover td {
+  background: #fcfbf9;
+}
+
+/* Status Chips */
+.statusChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.chipPresent {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.chipLate {
+  background: #fffbeb;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.chipAbsent {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.chipLeave {
+  background: #f0f9ff;
+  color: #075985;
+  border: 1px solid #bae6fd;
+}
+
+.chipPending {
+  background: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.chipApproved {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.chipRejected {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+/* Tabs */
+.tabsRow {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid #e2ddd6;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.tabBtn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 140ms ease;
+}
+
+.tabBtnActive {
+  background: #590b28;
+  color: #ffffff;
+}
+
+/* Slide-Over Drawer */
+.drawerOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 50;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.drawerContent {
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
+  background: #ffffff;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+}
+
+.drawerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2ddd6;
+  padding-bottom: 16px;
+}
+
+.drawerClose {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #64748b;
+}

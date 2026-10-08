@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { EmsProvider } from "@/context/EmsStore";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,12 +18,12 @@ const geistMono = Geist_Mono({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#690021",
+  themeColor: "#590b28",
 };
 
 export const metadata: Metadata = {
-  title: "JobQuest | Login",
-  description: "Sign in to JobQuest Employee Management System.",
+  title: "JobQuest | Employee Management System",
+  description: "Modern, secure Employee Management System for Employees and Department Managers.",
 };
 
 export default function RootLayout({
@@ -32,7 +33,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>{children}</body>
+      <body>
+        <EmsProvider>
+          {children}
+        </EmsProvider>
+      </body>
     </html>
   );
 }
